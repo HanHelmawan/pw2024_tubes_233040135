@@ -1,0 +1,51 @@
+/* navbar */
+.navbar {
+  background-color: rgb(1, 28, 60);
+}
+
+.navbar li a {
+  color: white;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  place-content: center;
+  scale: 1;
+  gap: 15px;
+  position: relative;
+}
+
+.copyright {
+  display: flex;
+  place-content: center;
+  scale: 1;
+  gap: 15px;
+  position: relative;
+}
+
+/* film */
+.title-movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px auto;
+  place-content: start;
+}
+
+.card img {
+  height: 30vh;
+  width: auto;
+}
+
+.card {
+  flex-direction: row;
+  display: flex;
+}
+
+/* Mengatur container utama */
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse; /* Menyebarkan konten dan highlight */
+  flex-wrap: wrap;
+}
