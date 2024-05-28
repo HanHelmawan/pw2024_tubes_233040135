@@ -7,13 +7,22 @@
   color: white;
 }
 
+.nav-item .nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 /* footer */
 .footer {
   display: flex;
   place-content: center;
   scale: 1;
   gap: 15px;
+  padding-top: 10px;
   position: relative;
+  background-color: #011c3c;
+  fill: white;
 }
 
 .copyright {
@@ -22,6 +31,8 @@
   scale: 1;
   gap: 15px;
   position: relative;
+  background-color: #011c3c;
+  color: white;
 }
 
 /* film */
@@ -43,9 +54,61 @@
   display: flex;
 }
 
+.highlight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 /* Mengatur container utama */
 .wrapper {
   display: flex;
-  flex-direction: row-reverse; /* Menyebarkan konten dan highlight */
+  flex-direction: row; /* Menyebarkan konten dan highlight */
   flex-wrap: wrap;
+}
+
+/* Banner */
+.banner {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/banner_2.jpg");
+}
+
+.banner-content {
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-start h2 img {
+  width: 400px;
+}
+
+.text-start p {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  font-style: normal;
+  background-color: rgba(0, 0, 0, 0.659);
+}
+
+/* carousel */
+.carousel-contain {
+  background-color: #011c3c;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.carousel-item img {
+  height: 70vh;
+}
+
+.kami {
+  color: brown;
 }
