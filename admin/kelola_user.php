@@ -18,7 +18,7 @@ include '../include/config.php'; // Pastikan path ke config.php benar
     <a href="./admin.php" class="btn btn-warning">Kembali ke halaman admin</a>
     </div>
 
-    <div class="table-responsive">
+    <div class="table-responsive" style="padding-top: 20px;">
         <table class="table">
             <thead>
                 <tr>

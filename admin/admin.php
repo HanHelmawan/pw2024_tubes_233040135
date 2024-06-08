@@ -18,7 +18,7 @@ session_start();
     <a href="./kelola_user.php" class="btn btn-warning">Kelola User</a>
     </div>
 
-    <div class="table-responsive">
+    <div class="table-responsive" style="padding-top: 20px;">
         <table class="table">
             <thead>
                 <tr>

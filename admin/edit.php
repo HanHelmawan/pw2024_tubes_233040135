@@ -71,22 +71,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <?php include '../include/navbar.php'; ?>
     <div class="container">
-        <h2>Edit Konten Film</h2>
+
+        <h2 style="padding-top: 20px;"><mark style="background-color: #011c3c; color:white;">Edit Konten Film</mark></h2>
+
+     <div style="padding-top: 20px;">
+    <a href="./admin.php" class="btn btn-warning">Kembali ke halaman admin</a>
+    </div>
+
         <form method="POST" action="edit.php?content_id=<?php echo $id; ?>" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="content_title">Judul Konten</label>
+            <div class="form-group" style="padding-top: 20px;">
+                <label for="content_title" style="color: white; font-size: large; font-weight: 700;">Judul Konten</label>
                 <input type="text" class="form-control" id="content_title" name="content_title" value="<?php echo $row['content_title']; ?>" required>
             </div>
             <div class="form-group">
-                <label for="content_movies">Film</label>
+                <label for="content_movies" style="color: white; font-size: large; font-weight: 700;">Deskripsi konten</label>
                 <input type="text" class="form-control" id="content_movies" name="content_movies" value="<?php echo $row['content_movies']; ?>" required>
             </div>
             <div class="form-group">
-                <label for="url_content">URL</label>
+                <label for="url_content" style="color: white; font-size: large; font-weight: 700;">URL</label>
                 <input type="text" class="form-control" id="url_content" name="url_content" value="<?php echo $row['url_content']; ?>" required>
             </div>
             <div class="form-group">
-                <label for="content_photo">Foto</label>
+                <label for="content_photo" style="color: white; font-size: large; font-weight: 700;">Foto</label>
                 <input type="file" class="form-control" id="content_photo" name="content_photo" required>
                 <img src="../assets/img/<?php echo $row['content_photo']; ?>" style="width: 100px;">
             </div>

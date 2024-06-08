@@ -16,13 +16,12 @@ session_start();
             align-items: center;
             height: 100vh;
             width: 100%;
-            color: #EEC4DC;
+            color: white;
             font-family: "Poppins", sans-serif;
             font-weight: 500;
             font-size: 50px;
             font-style: normal;
-            background-color: #4B0082;
-            background-image: linear-gradient(to top left, #EE82EE, #8806CE)
+            background-image: url(./assets/img/movie.jpg);
             
         }
 
@@ -39,8 +38,8 @@ session_start();
     <body>
     <?php include './include/navbar.php'?>
     <div class="container-fluid" id="Profile">
-    <h1>Selamat Datang, <?php echo $username ?></h1>
-    <p>Anda sudah berhasil login 🥳</p>
+    <h1><mark style="background-color: #011c3c; color:white;">Selamat Datang, <?php echo $username ?></mark></h1>
+    <p><mark style="background-color: #011c3c; color:white;">Anda sudah berhasil login 🥳</mark></p>
     </div>
     <?php include './include/footer.php'?>
     <?php include 'script.php'?>
