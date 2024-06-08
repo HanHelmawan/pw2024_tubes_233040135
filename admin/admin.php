@@ -12,10 +12,11 @@ session_start();
 <body>
     <?php include '../include/navbar.php'?>
 <div class="container-fluid">
-        <h2>Konten Film</h2>
-
+        <h2 style="padding-top: 20px;"><mark style="background-color: #011c3c; color:white;">Konten Film</mark></h2>
+    <div style="padding-top: 20px;">
     <a href="tambah_konten.php" class="btn btn-danger">Tambah Konten</a>
     <a href="./kelola_user.php" class="btn btn-warning">Kelola User</a>
+    </div>
 
     <div class="table-responsive">
         <table class="table">

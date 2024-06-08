@@ -45,29 +45,35 @@ $conn->close();
 <body>
     <?php include '../include/navbar.php'; ?>
     <div class="container">
-        <h2>Tambah Konten Film</h2>
+
+       <h2 style="padding-top: 20px;"><mark style="background-color: #011c3c; color:white;">Tambah Konten Film</mark></h2>
+
+     <div style="padding-top: 20px;">
+    <a href="./admin.php" class="btn btn-warning">Kembali ke halaman admin</a>
+    </div>
+
         <form method="POST" action="tambah_konten.php" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="content_title">Judul Konten</label>
+            <div class="form-group" style="padding-top: 20px;">
+                <label for="content_title" style="color: white; font-size: large; font-weight: 700;">Judul Konten</label>
                 <input type="text" class="form-control" id="content_title" name="content_title" required>
             </div>
             <div class="form-group">
-                <label for="content_movies">Film</label>
+                <label for="content_movies" style="color: white; font-size: large; font-weight: 700;">Deskripsi Konten</label>
                 <input type="text" class="form-control" id="content_movies" name="content_movies" required>
             </div>
             <div class="form-group">
-                <label for="url_content">URL</label>
+                <label for="url_content" style="color: white; font-size: large; font-weight: 700;">URL</label>
                 <input type="text" class="form-control" id="url_content" name="url_content" required>
             </div>
             <div class="form-group">
-                <label for="content_photo">Foto</label>
+                <label for="content_photo" style="color: white; font-size: large; font-weight: 700;">Foto</label>
                  <input type="file" class="form-control" id="content_photo" name="content_photo" required>
             </div>
              <div class="form-group">
-                <label for="admin_id">Admin Id</label>
+                <label for="admin_id" style="color: white; font-size: large; font-weight: 700;">Admin Id</label>
                 <input type="text" class="form-control" id="admin_id" name="admin_id" required>
             </div>
-            <button type="submit" class="btn btn-primary">Tambah</button>
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Tambah</button>
         </form>
     </div>
     <?php include '../include/footer.php'; ?>

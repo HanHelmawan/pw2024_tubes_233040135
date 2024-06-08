@@ -31,6 +31,9 @@ $username = isset( $_SESSION['username'] ) ? $_SESSION['username'] :'Guest';
     <li class="nav-item">
         <a class="nav-link" href="<?php echo BASE_URL; ?>register_user.php">Register</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo BASE_URL; ?>admin/login_admin.php">Admin</a>
+    </li>
 <?php } ?>
       </ul>
      <form class="d-flex" role="search" method="GET">

@@ -13,10 +13,10 @@ include '../include/config.php'; // Pastikan path ke config.php benar
 <body>
     <?php include '../include/navbar.php'?>
 <div class="container-fluid">
-        <h2>Konten Film</h2>
-
-    <a href="tambah_konten.php" class="btn btn-danger">Tambah Konten</a>
-    <a href="./kelola_user.php" class="btn btn-warning">Kelola User</a>
+       <h2 style="padding-top: 20px;"><mark style="background-color: #011c3c; color:white;">Kelola User</mark></h2>
+    <div style="padding-top: 20px;">
+    <a href="./admin.php" class="btn btn-warning">Kembali ke halaman admin</a>
+    </div>
 
     <div class="table-responsive">
         <table class="table">

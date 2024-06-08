@@ -53,8 +53,9 @@ $conn->close();
             height: 100vh;
             width: 100%;
             color: white;
-            background-color: #4B0082;
-            background-image: linear-gradient(to top left, #EE82EE, #8806CE)
+            background-image: url(./assets/img/banner_2.jpg);
+            background-position: center;
+            background-size: cover;
 
         }
 
@@ -64,7 +65,7 @@ $conn->close();
             align-items: center;
             flex-direction: column;
             margin: auto;
-            background-image: linear-gradient(to bottom left, #4B0082, #9400D3);
+            background-color: #011c3c;
             width: 400px;
             height: 600px;
             border-radius: 20px;
@@ -85,7 +86,7 @@ $conn->close();
             position: absolute;
             margin-top: -150px;
             margin-right: 6px;
-            fill: #330066;
+            fill: white;
             justify-content: center;
             align-items: center;
         }
@@ -158,7 +159,9 @@ $conn->close();
         <input type="email" id="email_user" name="email_user" required><br><br>
         <label for="password_user">Password:</label>
         <input type="password" id="password_user" name="password_user" required><br><br>
+        <div class="daftar" style="text-align:center;">
         <button type="submit" value="Daftar">Daftar</button>
+        </div>
     </form>
     </div>
 </div>

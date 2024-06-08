@@ -1,3 +1,9 @@
+body {
+  background-image: url(../img/movie.jpg);
+  background-position: center;
+  background-size: contain;
+}
+
 /* navbar */
 .navbar {
   background-color: rgb(1, 28, 60);
@@ -54,10 +60,22 @@
   display: flex;
 }
 
+.card-body {
+  background-color: #011c3c;
+}
+
 .highlight {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
+}
+
+.teks {
+  color: white;
+}
+
+.terkini {
+  color: brown;
 }
 
 /* Mengatur container utama */
@@ -112,3 +130,5 @@
 .kami {
   color: brown;
 }
+
+
