@@ -1,7 +1,41 @@
 <?php 
 include '../include/config.php'; // Pastikan path ke config.php benar
-$search = isset($_GET["search"]) ? $_GET["search"] : null ;
+$search = isset($_GET["search"]) ? $_GET["search"] : null;
 session_start();
+
+$search = isset($_GET['search']) ? $_GET['search'] : '';
+$sort = isset($_GET['sort']) ? $_GET['sort'] : '';
+
+// Dasar kueri SQL
+$sql = "SELECT content_id, content_title, content_movies, url_content, content_photo FROM movies_content";
+
+// Menambahkan pencarian jika ada
+if ($search) {
+    $sql .= " WHERE content_title LIKE '%$search%'";
+}
+                
+                $sql = "SELECT content_id, content_title, content_movies, url_content, content_photo FROM movies_content";
+                if ($search) {
+                $sql .=" WHERE content_title LIKE '%$search%'";
+                }
+                // Menambahkan sortir jika ada
+                switch ($sort) {
+                    case 'content_id_asc':
+                        $sql .= " ORDER BY content_id ASC";
+                        break;
+                    case 'content_title_asc':
+                        $sql .= " ORDER BY content_title ASC"; // Misalkan 'username_user_asc' mengacu pada judul konten
+                        break;
+                    case 'content_title_desc':
+                        $sql .= " ORDER BY content_title DESC"; // 'username_name_desc' juga mengacu pada judul konten
+                        break;
+                    default:
+                        // Default sortir jika diperlukan
+                        $sql .= " ORDER BY content_id ASC";
+                        break;
+                }
+                $result = $conn->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +53,13 @@ session_start();
     </div>
 
     <div class="table-responsive" style="padding-top: 20px;">
+
+    <select id="sortingSelect" name="sort" onchange="applySort()">
+        <option value="content_id_asc" <?php if ($sort == 'content_id_asc') echo 'selected'; ?>>Default</option>
+        <option value="content_title_asc" <?php if ($sort == 'content_title_asc') echo 'selected'; ?>>Judul A to Z</option>
+        <option value="content_title_desc" <?php if ($sort == 'content_title_desc') echo 'selected'; ?>>Judul Z to A</option>
+    </select>
+
         <table class="table">
             <thead>
                 <tr>
@@ -32,13 +73,6 @@ session_start();
             </thead>
             <tbody>
                 <?php
-                include '../include/config.php'; // Pastikan path ke config.php benar
-                $sql = "SELECT content_id, content_title, content_movies, url_content, content_photo FROM movies_content";
-                if ($search) {
-                $sql .=" WHERE content_title LIKE '%$search%'";
-                }
-                $result = $conn->query($sql);
-
                 if ($result->num_rows > 0) {
                     $no = 1;
                     while($row = $result->fetch_assoc()) {
@@ -61,6 +95,14 @@ session_start();
         </table>
     </div>
     </div>
+
+    <script>
+function applySort() {
+    var sortingValue = document.getElementById("sortingSelect").value;
+    // Misalkan kita mengirimkan permintaan melalui GET
+    window.location.href = "?sort=" + sortingValue;
+}
+</script>
 
 
     <?php include '../include/footer.php' ?>
