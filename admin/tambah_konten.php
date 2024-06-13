@@ -67,7 +67,7 @@ $conn->close();
             </div>
             <div class="form-group">
                 <label for="content_photo" style="color: white; font-size: large; font-weight: 700;">Foto</label>
-                 <input type="file" class="form-control" id="content_photo" name="content_photo" required>
+                 <input type="file" class="form-control" id="content_photo" accept="image/jpg, image/png, image/jpeg" name="content_photo" required>
             </div>
              <div class="form-group">
                 <label for="admin_id" style="color: white; font-size: large; font-weight: 700;">Admin Id</label>
